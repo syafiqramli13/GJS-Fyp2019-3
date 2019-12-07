@@ -1,5 +1,5 @@
 {
-  "name": "gjsapplication",
+  "name": "gjs",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
@@ -13,6 +13,7 @@
     "core-js": "^3.1.4",
     "enzyme": "^3.10.0",
     "enzyme-adapter-react-16": "^1.14.0",
+    "firebase": "^7.5.2",
     "flag-icon-css": "^3.3.0",
     "font-awesome": "^4.7.0",
     "node-sass": "^4.12.0",

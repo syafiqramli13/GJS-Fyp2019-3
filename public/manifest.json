@@ -1,6 +1,6 @@
 {
-  "short_name": "GJS Mobile App",
-  "name": "Gombak Jungle School Mobile Application",
+  "short_name": "GJS App",
+  "name": "Gombak Jungle School Application",
   "icons": [
     {
       "src": "./favicon.ico",
@@ -18,8 +18,8 @@
       "sizes": "512x512"
     }
   ],
-  "start_url": "/Home/AboutUs",
+  "start_url": ".",
   "display": "standalone",
-  "theme_color": "#ffffff",
+  "theme_color": "#000000",
   "background_color": "#ffffff"
 }
