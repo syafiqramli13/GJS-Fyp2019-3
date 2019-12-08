@@ -1,164 +1,103 @@
-import React, { Component } from "react";
-import {
-  Card,
-  CardBody,
-  Carousel,
-  CarouselControl,
-  CarouselIndicators,
-  CarouselItem,
-  CarouselCaption,
-  CardHeader,
-  Col,
-  Row
-} from "reactstrap";
+import React, { useState, useCallback } from "react";
+import Gallery from "react-photo-gallery";
+import Carousel, { Modal, ModalGateway } from "react-images";
+import { Card, CardBody, CardHeader, Col, Row } from "reactstrap";
 
-const items = [
+const photos = [
   {
     src: "./assets/img/gallery/gjs1.jpg",
     altText: "Slide 1",
-    caption: "Slide 1"
+    caption: "Slide 1",
+    width: 5,
+    height: 3
   },
   {
     src: "./assets/img/gallery/gjs2.jpg",
     altText: "Slide 2",
-    caption: "Slide 2"
+    caption: "Slide 2",
+    width: 5,
+    height: 3
   },
   {
     src: "./assets/img/gallery/gjs3.jpg",
     altText: "Slide 3",
-    caption: "Slide 3"
+    caption: "Slide 3",
+    width: 4,
+    height: 3
   },
   {
     src: "./assets/img/gallery/gjs4.jpg",
-    altText: "Slide 3",
-    caption: "Slide 3"
+    altText: "Slide 4",
+    caption: "Slide 4",
+    width: 5,
+    height: 3
   },
   {
     src: "./assets/img/gallery/gjs5.jpg",
-    altText: "Slide 3",
-    caption: "Slide 3"
+    altText: "Slide 5",
+    caption: "Slide 5",
+    width: 4,
+    height: 3
   },
   {
     src: "./assets/img/gallery/gjs6.jpg",
-    altText: "Slide 3",
-    caption: "Slide 3"
+    altText: "Slide 6",
+    caption: "Slide 6",
+    width: 4,
+    height: 3
   },
   {
     src: "./assets/img/gallery/gjs8.jpg",
-    altText: "Slide 3",
-    caption: "Slide 3"
+    altText: "Slide 7",
+    caption: "Slide 7",
+    width: 4,
+    height: 3
   }
 ];
 
-class Gallery extends Component {
-  constructor(props) {
-    super(props);
-    this.state = { activeIndex: 0 };
-    this.next = this.next.bind(this);
-    this.previous = this.previous.bind(this);
-    this.goToIndex = this.goToIndex.bind(this);
-    this.onExiting = this.onExiting.bind(this);
-    this.onExited = this.onExited.bind(this);
-  }
+function PhotoViewer() {
+  const [currentImage, setCurrentImage] = useState(0);
+  const [viewerIsOpen, setViewerIsOpen] = useState(false);
 
-  onExiting() {
-    this.animating = true;
-  }
+  const openLightbox = useCallback((event, { photo, index }) => {
+    setCurrentImage(index);
+    setViewerIsOpen(true);
+  }, []);
 
-  onExited() {
-    this.animating = false;
-  }
+  const closeLightbox = () => {
+    setCurrentImage(0);
+    setViewerIsOpen(false);
+  };
 
-  next() {
-    if (this.animating) return;
-    const nextIndex =
-      this.state.activeIndex === items.length - 1
-        ? 0
-        : this.state.activeIndex + 1;
-    this.setState({ activeIndex: nextIndex });
-  }
-
-  previous() {
-    if (this.animating) return;
-    const nextIndex =
-      this.state.activeIndex === 0
-        ? items.length - 1
-        : this.state.activeIndex - 1;
-    this.setState({ activeIndex: nextIndex });
-  }
-
-  goToIndex(newIndex) {
-    if (this.animating) return;
-    this.setState({ activeIndex: newIndex });
-  }
-  render() {
-    const { activeIndex } = this.state;
-
-    // const slides = items.map(item => {
-    //   return (
-    //     <CarouselItem
-    //       onExiting={this.onExiting}
-    //       onExited={this.onExited}
-    //       key={item.src}
-    //     >
-    //       <img className="d-block w-100 " src={item.src} alt={item.altText} />
-    //     </CarouselItem>
-    //   );
-    // });
-
-    const slides2 = items.map(item => {
-      return (
-        <CarouselItem
-          onExiting={this.onExiting}
-          onExited={this.onExited}
-          key={item.src}
-        >
-          <img className="d-block w-100" src={item.src} alt={item.altText} />
-          <CarouselCaption
-          // captionText={item.caption}
-          // captionHeader={item.caption}
-          />
-        </CarouselItem>
-      );
-    });
-
-    return (
-      <div className="animated fadeIn">
-        <Row>
-          <Col xl>
-            <Card>
-              <CardHeader className="text-center">
-                <strong>Photo Gallery</strong>
-              </CardHeader>
-              <CardBody>
-                <Carousel
-                  activeIndex={activeIndex}
-                  next={this.next}
-                  previous={this.previous}
-                >
-                  <CarouselIndicators
-                    items={items}
-                    activeIndex={activeIndex}
-                    onClickHandler={this.goToIndex}
-                  />
-                  {slides2}
-                  <CarouselControl
-                    direction="prev"
-                    directionText="Previous"
-                    onClickHandler={this.previous}
-                  />
-                  <CarouselControl
-                    direction="next"
-                    directionText="Next"
-                    onClickHandler={this.next}
-                  />
-                </Carousel>
-              </CardBody>
-            </Card>
-          </Col>
-        </Row>
-      </div>
-    );
-  }
+  return (
+    <div className="animated fadeIn">
+      <Row>
+        <Col>
+          <Card className="card-accent-primary">
+            <CardHeader className="text-center">
+              <strong>Photo Gallery</strong>
+            </CardHeader>
+            <CardBody>
+              <Gallery photos={photos} onClick={openLightbox} />
+              <ModalGateway>
+                {viewerIsOpen ? (
+                  <Modal onClose={closeLightbox}>
+                    <Carousel
+                      currentIndex={currentImage}
+                      views={photos.map(x => ({
+                        ...x,
+                        srcset: x.srcSet,
+                        caption: x.title
+                      }))}
+                    />
+                  </Modal>
+                ) : null}
+              </ModalGateway>
+            </CardBody>
+          </Card>
+        </Col>
+      </Row>
+    </div>
+  );
 }
-export default Gallery;
+export default PhotoViewer;

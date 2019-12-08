@@ -2,7 +2,7 @@ export default {
   items: [
     {
       title: true,
-      name: "Public",
+      name: "Public & Participant",
       wrapper: {
         element: "",
         attributes: {}
@@ -47,6 +47,11 @@ export default {
           icon: "icon-picture"
         },
         {
+          name: "Photo Gallery",
+          url: "/Gallery/PhotoGallery",
+          icon: "icon-picture"
+        },
+        {
           name: "Video",
           url: "/Gallery/Video",
           icon: "icon-film"
@@ -63,49 +68,40 @@ export default {
       url: "/Inquiries",
       icon: "icon-pencil"
     },
-    {
-      title: true,
-      name: "Administrator",
-      wrapper: {
-        element: "",
-        attributes: {}
-      },
-      class: "text-center"
-    },
-    {
-      name: "Dashboard",
-      url: "/Dashboard",
-      icon: "icon-grid"
-    },
-    {
-      name: "Inventory",
-      url: "/Inventory",
-      icon: "icon-basket"
-    },
-    {
-      name: "Participant List",
-      url: "/ParticipantList",
-      icon: "icon-list"
-    },
-    {
-      name: "Point Of Sale",
-      url: "/POS",
-      icon: "icon-handbag"
-    },
-    {
-      name: "Register Participant",
-      url: "/RegisterParticipant",
-      icon: "icon-note"
-    },
-    {
-      title: true,
-      name: "Participant",
-      wrapper: {
-        element: "",
-        attributes: {}
-      },
-      class: "text-center"
-    },
+    // {
+    //   title: true,
+    //   name: "Administrator",
+    //   wrapper: {
+    //     element: "",
+    //     attributes: {}
+    //   },
+    //   class: "text-center"
+    // },
+    // {
+    //   name: "Dashboard",
+    //   url: "/Dashboard",
+    //   icon: "icon-grid"
+    // },
+    // {
+    //   name: "Inventory",
+    //   url: "/Inventory",
+    //   icon: "icon-basket"
+    // },
+    // {
+    //   name: "Participant List",
+    //   url: "/ParticipantList",
+    //   icon: "icon-list"
+    // },
+    // {
+    //   name: "Point Of Sale",
+    //   url: "/POS",
+    //   icon: "icon-handbag"
+    // },
+    // {
+    //   name: "Register Participant",
+    //   url: "/RegisterParticipant",
+    //   icon: "icon-note"
+    // },
     {
       name: "Kerchang's Scanner",
       url: "/QRscanner",

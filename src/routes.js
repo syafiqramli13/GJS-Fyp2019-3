@@ -4,7 +4,7 @@ import React from "react";
 
 const AboutUs = React.lazy(() => import("./screens/PubAboutUs"));
 const Activity = React.lazy(() => import("./screens/PubActivity"));
-// const Archive = React.lazy(() => import("./screens/Archive"));
+// const Archive = React.lazy(() => import("./screens/PubArchive"));
 const Contact = React.lazy(() => import("./screens/PubContact"));
 // const Gallery = React.lazy(() => import("./screens/Gallery"));
 const Inquiries = React.lazy(() => import("./screens/PubInquiries"));
@@ -21,6 +21,7 @@ const POS = React.lazy(() => import("./screens/AdminPOS"));
 const RegisterParticipant = React.lazy(() => import("./screens/AdminRegister"));
 const QRscanner = React.lazy(() => import("./screens/QRscanner"));
 const UpdateProfile = React.lazy(() => import("./screens/UpdateProfile"));
+const PhotoGallery = React.lazy(() => import("./screens/PhotoGallery"));
 
 // https://github.com/ReactTraining/react-router/tree/master/packages/react-router-config
 
@@ -35,6 +36,11 @@ const routes = [
   // { path: "/Gallery", name: "Gallery", component: Gallery },
   { path: "/Gallery", exact: true, name: "Gallery", component: Photo },
   { path: "/Gallery/Photo", name: "Photo", component: Photo },
+  {
+    path: "/Gallery/PhotoGallery",
+    name: "PhotoGallery",
+    component: PhotoGallery
+  },
   { path: "/Gallery/Video", name: "Video", component: Video },
   { path: "/Contact", name: "Contact", component: Contact },
   { path: "/Inquiries", name: "Inquiries", component: Inquiries },
