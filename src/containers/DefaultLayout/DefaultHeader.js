@@ -2,10 +2,10 @@ import React, { Component } from "react";
 // import { Link, NavLink } from "react-router-dom";
 import {
   // Badge,
-  UncontrolledDropdown,
-  DropdownItem,
-  DropdownMenu,
-  DropdownToggle,
+  // UncontrolledDropdown,
+  // DropdownItem,
+  // DropdownMenu,
+  // DropdownToggle,
   Nav
   // NavItem
 } from "reactstrap";
@@ -64,29 +64,10 @@ class DefaultHeader extends Component {
         <Nav className="ml-auto " navbar>
           {/* nav icon dkt bar header */}
 
-          {/* <NavItem className="d-md-down-none">
-            <NavLink to="#" className="nav-link">
-              <i className="icon-bell"></i>
-              <Badge pill color="danger">
-                5
-              </Badge>
-            </NavLink>
-          </NavItem>
-          <NavItem className="d-md-down-none">
-            <NavLink to="#" className="nav-link">
-              <i className="icon-list"></i>
-            </NavLink>
-          </NavItem>
-          <NavItem className="d-md-down-none">
-            <NavLink to="#" className="nav-link">
-              <i className="icon-location-pin"></i>
-            </NavLink>
-          </NavItem> */}
-
           {/* profile */}
-          <UncontrolledDropdown nav direction="down">
+          {/*<UncontrolledDropdown nav direction="down">
             <DropdownToggle nav>
-              {/* <i className="fa fa-user" alt="Profile"></i> */}
+               <i className="fa fa-user" alt="Profile"></i> 
               <img
                 src={"../../assets/img/naim.jpeg"}
                 className="img-avatar"
@@ -127,7 +108,7 @@ class DefaultHeader extends Component {
                 <Badge color="warning">42</Badge>
               </DropdownItem> */}
 
-              {/* <DropdownItem header tag="div" className="text-center">
+          {/* <DropdownItem header tag="div" className="text-center">
                 <strong>Settings</strong>
               </DropdownItem>
 
@@ -145,9 +126,9 @@ class DefaultHeader extends Component {
               <DropdownItem divider />
               <DropdownItem>
                 <i className="fa fa-shield"></i> Lock Account
-              </DropdownItem> */}
+              </DropdownItem> 
             </DropdownMenu>
-          </UncontrolledDropdown>
+          </UncontrolledDropdown>*/}
         </Nav>
         {/* <AppAsideToggler className="d-md-down-none" /> */}
         {/*<AppAsideToggler className="d-lg-none" mobile />*/}

@@ -47,10 +47,66 @@ const photos = [
     height: 3
   },
   {
-    src: "./assets/img/gallery/gjs8.jpg",
+    src: "./assets/img/gallery/gjs7.jpg",
     altText: "Slide 7",
     caption: "Slide 7",
+    width: 5,
+    height: 3
+  },
+  {
+    src: "./assets/img/gallery/gjs8.jpg",
+    altText: "Slide 8",
+    caption: "Slide 8",
     width: 4,
+    height: 3
+  },
+  {
+    src: "./assets/img/gallery/gjs9.jpg",
+    altText: "Slide 9",
+    caption: "Slide 9",
+    width: 5,
+    height: 3
+  },
+  {
+    src: "./assets/img/gallery/gjs10.jpg",
+    altText: "Slide 10",
+    caption: "Slide 10",
+    width: 5,
+    height: 3
+  },
+  {
+    src: "./assets/img/gallery/gjs11.jpg",
+    altText: "Slide 11",
+    caption: "Slide 11",
+    width: 5,
+    height: 3
+  },
+  {
+    src: "./assets/img/gallery/gjs12.jpg",
+    altText: "Slide 12",
+    caption: "Slide 12",
+    width: 5,
+    height: 3
+  },
+  {
+    src: "./assets/img/gallery/gjs13.jpg",
+    altText: "Slide 13",
+    caption: "Slide 13",
+    width: 5,
+    height: 3
+  },
+  {
+    src: "./assets/img/gallery/gjs14.jpg",
+    altText: "Slide 14",
+    caption: "Slide 14",
+    width: 5,
+    height: 3
+  },
+  {
+    src: "./assets/img/gallery/gjs15.jpg",
+    altText: "Slide 15",
+    caption: "Slide 15",
+    width: 5,
     height: 3
   }
 ];

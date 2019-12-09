@@ -15,10 +15,15 @@ class DefaultFooter extends Component {
     return (
       <React.Fragment>
         <span className="ml-auto">
-          <div>
-            <img src="assets/img/brand/JSGlogo.png" alt="" width="30" />
-            Gombak Jungle School &copy; 2019 FYP KICT IIUM
-          </div>
+          <p>
+            <img
+              className="pr-3 "
+              src="./assets/img/favicon.png"
+              alt=""
+              width="40"
+            />
+            Gombak Jungle School &copy; 2019 FYP KICT-IIUM
+          </p>
         </span>
       </React.Fragment>
     );

@@ -37,26 +37,19 @@ export default {
       ]
     },
     {
-      name: "Gallery",
-      url: "/Gallery",
-      icon: "icon-screen-desktop",
-      children: [
-        {
-          name: "Photo",
-          url: "/Gallery/Photo",
-          icon: "icon-picture"
-        },
-        {
-          name: "Photo Gallery",
-          url: "/Gallery/PhotoGallery",
-          icon: "icon-picture"
-        },
-        {
-          name: "Video",
-          url: "/Gallery/Video",
-          icon: "icon-film"
-        }
-      ]
+      name: "Photo Gallery",
+      url: "/GalleryPhoto",
+      icon: "icon-picture"
+    },
+    {
+      name: "Video Gallery",
+      url: "/Video",
+      icon: "icon-film"
+    },
+    {
+      name: "Kerchang's Scanner",
+      url: "/KerchangScanner",
+      icon: "icon-camera"
     },
     {
       name: "Contact",
@@ -67,50 +60,6 @@ export default {
       name: "Inquiries",
       url: "/Inquiries",
       icon: "icon-pencil"
-    },
-    // {
-    //   title: true,
-    //   name: "Administrator",
-    //   wrapper: {
-    //     element: "",
-    //     attributes: {}
-    //   },
-    //   class: "text-center"
-    // },
-    // {
-    //   name: "Dashboard",
-    //   url: "/Dashboard",
-    //   icon: "icon-grid"
-    // },
-    // {
-    //   name: "Inventory",
-    //   url: "/Inventory",
-    //   icon: "icon-basket"
-    // },
-    // {
-    //   name: "Participant List",
-    //   url: "/ParticipantList",
-    //   icon: "icon-list"
-    // },
-    // {
-    //   name: "Point Of Sale",
-    //   url: "/POS",
-    //   icon: "icon-handbag"
-    // },
-    // {
-    //   name: "Register Participant",
-    //   url: "/RegisterParticipant",
-    //   icon: "icon-note"
-    // },
-    {
-      name: "Kerchang's Scanner",
-      url: "/QRscanner",
-      icon: "icon-note"
-    },
-    {
-      name: "Update Profile",
-      url: "/UpdateProfile",
-      icon: "icon-note"
     },
     {
       name: "GJS Facebook",

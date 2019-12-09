@@ -29,11 +29,6 @@ class DefaultLayout extends Component {
     <div className="animated fadeIn pt-1 text-center">Loading...</div>
   );
 
-  signOut(e) {
-    e.preventDefault();
-    this.props.history.push("/login");
-  }
-
   render() {
     return (
       <div className="app">
@@ -58,7 +53,7 @@ class DefaultLayout extends Component {
           </AppSidebar>
           <main className="main">
             <AppBreadcrumb appRoutes={routes} router={router} />
-            <Container>
+            <Container className="pt-3">
               <Suspense fallback={this.loading()}>
                 <Switch>
                   {routes.map((route, idx) => {

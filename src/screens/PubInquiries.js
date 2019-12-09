@@ -1,18 +1,7 @@
 import React, { Component } from "react";
-import {
-  // Badge,
-  Card,
-  CardBody,
-  // CardFooter,
-  CardHeader,
-  Col,
-  Row
-  // Collapse,
-  // Fade
-} from "reactstrap";
-// import { AppSwitch } from "@coreui/react";
+import { Card, CardBody, CardHeader, Col, Row } from "reactstrap";
 
-class Cards extends Component {
+export default class Inquiries extends Component {
   render() {
     return (
       <div className="animated fadeIn">
@@ -20,13 +9,7 @@ class Cards extends Component {
           <Col xs="12" sm="6" md="4">
             <Card className="card-accent-primary">
               <CardHeader>Inquiries-Card with accent</CardHeader>
-              <CardBody>
-                Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed
-                diam nonummy nibh euismod tincidunt ut laoreet dolore magna
-                aliquam erat volutpat. Ut wisi enim ad minim veniam, quis
-                nostrud exerci tation ullamcorper suscipit lobortis nisl ut
-                aliquip ex ea commodo consequat.
-              </CardBody>
+              <CardBody>Email me!</CardBody>
             </Card>
           </Col>
         </Row>
@@ -34,4 +17,3 @@ class Cards extends Component {
     );
   }
 }
-export default Cards;
